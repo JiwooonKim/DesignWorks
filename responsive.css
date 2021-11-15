@@ -1,0 +1,112 @@
+@media (max-width: 768px) {
+  /*
+  html {
+    scroll-behavior: smooth;
+  }
+  */
+  /* Entire Layout */
+  .cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: auto;
+    position: relative;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+
+  /* Header */
+  header {
+    transition: 0.5s;
+    z-index: 1;
+  }
+  header.active {
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0 2px 10px #ccc;
+  }
+  .gnb_inner {
+    line-height: 40px;
+  }
+  .gnb_inner .logo {
+    line-height: 60px;
+  }
+  .gnb_inner .gnb {
+    background-color: rgb(253, 253, 253);
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 250px;
+    height: 100vh;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+  }
+  .gnb_inner .slogan {
+    display: none;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .gnb .menu {
+    display: block;
+    margin-top: 60px;
+    padding-right: 20px;
+  }
+  .menu a {
+    display: block;
+    text-align: right;
+    color: #000;
+  }
+
+  /* Trigger */
+  .gnb_inner .trigger {
+    display: block;
+    width: 24px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .trigger span {
+    /*span인데도 width를 가지는 이유: absolute를 줬을 때 요소가 인라인블럭으로 강제로 변함*/
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(225deg);
+  }
+  .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-225deg);
+  }
+
+  /* Go to top button */
+  .gototop {
+    display: block;
+  }
+
+  /* Hiring button */
+  .bth_hiring {
+    right: 20px;
+    bottom: 20px;
+  }
+}
